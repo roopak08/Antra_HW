@@ -2,7 +2,7 @@
 <html lang = "en">
 <head>
     <meta charset = "UTF-8">
-    <meta nane = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
     <title> Sign Up Form</title>
     <link rel = "stylesheet" href = "style.css">
 </head>
@@ -10,23 +10,25 @@
     <div class = "container">
         <div class = "signup-form">
             <h2>Sign Up</h2>
-            <form id = "signup-form" action = "#">
+            <form id = "form" action = "#">
                 <div class="input-group">
                     <input type="text" placeholder="First Name" required>
                     <input type="text" placeholder="Last Name" required>
                 </div>
                 <input type="text" placeholder="Mobile No." required>
                 <input type="email" placeholder="Email Address" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
+                <div class = "pwd">
+                    <input type="password" id = "password"S placeholder="Password" required>
+                    <input type="password" id = "confirm-password" placeholder="Confirm Password" required onfocusout="validatePasswords(this)">
+                </div>
                 <div class = "checkbox-group"> 
                     <input type="checkbox" id="agree" required>
                     <label for="agree">I Agree</label>
                 </div>
-                <p> By clicking <span>Register</span>, you agree to the <a href = "#">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
+                <p> By clicking <span>Register</span>, you agree to the <a href = "terms.html">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
                 <div class = "button-group">
-                    <button type = "submit">Register </button>
-                    <button type = "button" onclick = "location.href = '#'">Sign In</button>
+                    <button type = "submit" id = "register">Register </button>
+                    <button type = "button" id="signin" onclick = "location.href = '#'">Sign In</button>
                 </div>    
             </form>
         </div>
